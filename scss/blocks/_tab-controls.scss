@@ -1,0 +1,42 @@
+.tab-controls {
+    display: inline-flex;
+    padding: 6px;
+    align-items: flex-start;
+    border-radius: 44px;
+    background: #EEE;
+
+    @include tablet() {
+        overflow-x: auto;
+        max-width: clamp(150px, 1.935rem + 37.2vw, 400px);
+    }
+}
+.tab-conrols__btn {
+    height: 45px;
+    padding: 7px 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 32px;
+
+
+    color:rgba(31,31,31,0.8);
+
+    font-size: clamp(14px, 0.756rem + 0.6vw, 18px);
+    font-weight: 500;
+    line-height: 1.85;
+
+    transition: background-color all 0.2s ease-in;
+
+    &:hover {
+        background-color: rgba(255,255,255,0.5);
+    }
+
+    &--active {
+        background-color: #fff;
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+}
